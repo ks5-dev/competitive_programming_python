@@ -1,4 +1,5 @@
 import sys
+from itertools import product
 sys_input = sys.stdin.readline
 
 def inp():
@@ -13,6 +14,10 @@ def write(s):
     sys.stdout.write(s+" ")
 
 def main():
-    #for _ in range(inp()):
-
+    op = [7,8]
+    n = inp()
+    s = 0
+    for i in range(1,n+1):
+        s += len((list(product(op,repeat = i))))
+    print(s)
 main()

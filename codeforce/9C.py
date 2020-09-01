@@ -13,6 +13,13 @@ def write(s):
     sys.stdout.write(s+" ")
 
 def main():
-    #for _ in range(inp()):
+    n = inp()
+    cnt =0
+    for i in range(1,2**10):
+        if int(bin(i)[2:]) <= n:
+            cnt += 1
+        else:
+            break
+    print(cnt)
 
 main()
